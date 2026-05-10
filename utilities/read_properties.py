@@ -1,5 +1,4 @@
 import configparser
-from os import login_tty
 
 config = configparser.RawConfigParser()
 
