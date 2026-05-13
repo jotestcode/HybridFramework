@@ -1792,3 +1792,114 @@
 2026-m-02 11:33:54 AM:INFO:*********** Purchasing the items *************
 2026-m-02 11:33:54 AM:INFO:*********** Success text message *************
 2026-m-02 11:33:54 AM:INFO:Text message appears successfully *************
+2026-m-10 10:38:21 AM:INFO:******** Test01HomePage **********
+2026-m-10 10:38:21 AM:INFO:******* Verification of Home page TITLE *******
+2026-m-10 10:38:22 AM:INFO:******* TITLE matches *******
+2026-m-10 10:38:25 AM:INFO:******* Test_Home page info **********
+2026-m-10 10:38:26 AM:INFO:******* SUCCESS message matches *******
+2026-m-10 10:38:28 AM:INFO:*********** Test03 Login Page **********
+2026-m-10 10:38:28 AM:INFO:*********** test_valid_Login page Sign In started **********
+2026-m-10 10:38:35 AM:INFO:*********** test_invalid_login started **********
+2026-m-10 10:38:42 AM:INFO:*********** test_invalid_login error message matched **********
+2026-m-10 10:38:43 AM:INFO:*********** test_new_tab_link click started **********
+2026-m-10 10:38:47 AM:INFO:*********** switching the window handles to the new tab **********
+2026-m-10 10:38:50 AM:INFO:*********** New tab opened **********
+2026-m-10 10:38:50 AM:INFO:********** Retrieving text from the newly opened tab **********
+2026-m-10 10:38:51 AM:INFO:*********** Text successfully retrieved from the newly opened tab **********
+2026-m-10 10:38:51 AM:INFO:*********** Extracting substring from the retrieved text **********
+2026-m-10 10:38:51 AM:INFO:*********** Switch back to the original window tab **********
+2026-m-10 10:38:52 AM:INFO:*********** Test Miscellaneous UI Interaction ***********
+2026-m-10 10:38:57 AM:INFO:*********** Clicking on Radio button ***********
+2026-m-10 10:38:57 AM:INFO:*********** Entering a country name under 'Suggestion Class Exmaple' ***********
+2026-m-10 10:38:59 AM:INFO:*********** Clicking on dropdown menu options ***********
+2026-m-10 10:38:59 AM:INFO:*********** Clicking on checkbox options ************
+2026-m-10 10:39:00 AM:INFO:*********** Opening a new window page ************
+2026-m-10 10:39:00 AM:INFO:*********** Verifying if actual title matches with the expected title ************
+2026-m-10 10:39:00 AM:INFO:*********** Close the child window and switch back to parent window ************
+2026-m-10 10:39:01 AM:INFO:*********** Clicking on ALERT pop-up ************
+2026-m-10 10:39:01 AM:INFO:*********** Retrieving Alert pop-up text ************
+2026-m-10 10:39:01 AM:INFO:*********** Clicking on CONFIRM pop-up ************
+2026-m-10 10:39:01 AM:INFO:*********** Retrieving Confirm pop-up text ************
+2026-m-10 10:39:01 AM:INFO:*********** Clicking on HIDE button ************
+2026-m-10 10:39:01 AM:INFO:*********** Clicking on SHOW button ************
+2026-m-10 10:39:01 AM:INFO:*********** Enter random text on the textbox under HIDE/SHOW Example ************
+2026-m-10 10:39:01 AM:INFO:*********** Web table fixed header ************
+2026-m-10 10:39:01 AM:INFO:*********** Selecting and printing rows that matches with the position of Engineer ************
+2026-m-10 10:39:01 AM:INFO:*********** Mouse Hover example ************
+2026-m-10 10:39:01 AM:INFO:*********** Hover the mouse and select TOP option ************
+2026-m-10 10:39:01 AM:INFO:*********** Scrolls to the top the top of the page ************
+2026-m-10 10:39:04 AM:INFO:*********** Switch to iFrame Window ************
+2026-m-10 10:39:04 AM:INFO:*********** Extract the internal iFrame page title ************
+2026-m-10 10:39:04 AM:INFO:*********** Switch back to the main window ************
+2026-m-10 10:39:09 AM:INFO:*********** Test02ShopPage ***********
+2026-m-10 10:39:09 AM:INFO:*********** SHOP link click from HomePage ***********
+2026-m-10 10:39:12 AM:INFO:*********** Shop Page *************
+2026-m-10 10:39:12 AM:INFO:*********** Selecting products from the list of items *************
+2026-m-10 10:39:12 AM:INFO:*********** Adding items to cart ***************
+2026-m-10 10:39:12 AM:INFO:*********** Final checkout of items to purchase *************
+2026-m-10 10:39:12 AM:INFO:*********** Enter country name for delivery location *************
+2026-m-10 10:39:18 AM:INFO:*********** clicking the checkbox to I terms & conditions *************
+2026-m-10 10:39:18 AM:INFO:*********** Purchasing the items *************
+2026-m-10 10:39:18 AM:INFO:*********** Success text message *************
+2026-m-10 10:39:18 AM:INFO:Text message appears successfully *************
+2026-m-10 10:46:37 AM:INFO:******** Test01HomePage **********
+2026-m-10 10:46:37 AM:INFO:******* Verification of Home page TITLE *******
+2026-m-10 10:46:38 AM:INFO:******* TITLE matches *******
+2026-m-10 10:46:40 AM:INFO:******* Test_Home page info **********
+2026-m-10 10:46:42 AM:INFO:******* SUCCESS message matches *******
+2026-m-10 10:46:43 AM:INFO:*********** Test03 Login Page **********
+2026-m-10 10:46:43 AM:INFO:*********** test_valid_Login page Sign In started **********
+2026-m-10 10:46:49 AM:INFO:*********** test_invalid_login started **********
+2026-m-10 10:46:56 AM:INFO:*********** test_invalid_login error message matched **********
+2026-m-10 10:46:58 AM:INFO:*********** test_new_tab_link click started **********
+2026-m-10 10:47:02 AM:INFO:*********** switching the window handles to the new tab **********
+2026-m-10 10:47:05 AM:INFO:*********** New tab opened **********
+2026-m-10 10:47:05 AM:INFO:********** Retrieving text from the newly opened tab **********
+2026-m-10 10:47:05 AM:INFO:*********** Text successfully retrieved from the newly opened tab **********
+2026-m-10 10:47:05 AM:INFO:*********** Extracting substring from the retrieved text **********
+2026-m-10 10:47:05 AM:INFO:*********** Switch back to the original window tab **********
+2026-m-10 10:47:07 AM:INFO:*********** Test Miscellaneous UI Interaction ***********
+2026-m-10 10:47:11 AM:INFO:*********** Clicking on Radio button ***********
+2026-m-10 10:47:11 AM:INFO:*********** Entering a country name under 'Suggestion Class Exmaple' ***********
+2026-m-10 10:47:13 AM:INFO:*********** Clicking on dropdown menu options ***********
+2026-m-10 10:47:14 AM:INFO:*********** Clicking on checkbox options ************
+2026-m-10 10:47:14 AM:INFO:*********** Opening a new window page ************
+2026-m-10 10:47:14 AM:INFO:*********** Verifying if actual title matches with the expected title ************
+2026-m-10 10:47:14 AM:INFO:*********** Close the child window and switch back to parent window ************
+2026-m-10 10:47:16 AM:INFO:*********** Clicking on ALERT pop-up ************
+2026-m-10 10:47:16 AM:INFO:*********** Retrieving Alert pop-up text ************
+2026-m-10 10:47:16 AM:INFO:*********** Clicking on CONFIRM pop-up ************
+2026-m-10 10:47:16 AM:INFO:*********** Retrieving Confirm pop-up text ************
+2026-m-10 10:47:16 AM:INFO:*********** Clicking on HIDE button ************
+2026-m-10 10:47:16 AM:INFO:*********** Clicking on SHOW button ************
+2026-m-10 10:47:16 AM:INFO:*********** Enter random text on the textbox under HIDE/SHOW Example ************
+2026-m-10 10:47:16 AM:INFO:*********** Web table fixed header ************
+2026-m-10 10:47:16 AM:INFO:*********** Selecting and printing rows that matches with the position of Engineer ************
+2026-m-10 10:47:16 AM:INFO:*********** Mouse Hover example ************
+2026-m-10 10:47:16 AM:INFO:*********** Hover the mouse and select TOP option ************
+2026-m-10 10:47:16 AM:INFO:*********** Scrolls to the top the top of the page ************
+2026-m-10 10:47:19 AM:INFO:*********** Switch to iFrame Window ************
+2026-m-10 10:47:19 AM:INFO:*********** Extract the internal iFrame page title ************
+2026-m-10 10:47:19 AM:INFO:*********** Switch back to the main window ************
+2026-m-10 10:47:24 AM:INFO:*********** Test02ShopPage ***********
+2026-m-10 10:47:24 AM:INFO:*********** SHOP link click from HomePage ***********
+2026-m-10 10:47:26 AM:INFO:*********** Shop Page *************
+2026-m-10 10:47:26 AM:INFO:*********** Selecting products from the list of items *************
+2026-m-10 10:47:26 AM:INFO:*********** Adding items to cart ***************
+2026-m-10 10:47:26 AM:INFO:*********** Final checkout of items to purchase *************
+2026-m-10 10:47:26 AM:INFO:*********** Enter country name for delivery location *************
+2026-m-10 10:47:31 AM:INFO:*********** clicking the checkbox to I terms & conditions *************
+2026-m-10 10:47:31 AM:INFO:*********** Purchasing the items *************
+2026-m-10 10:47:31 AM:INFO:*********** Success text message *************
+2026-m-10 10:47:31 AM:INFO:Text message appears successfully *************
+2026-m-13 12:48:21 PM:INFO:*********** Test03 Login Page **********
+2026-m-13 12:48:21 PM:INFO:*********** test_valid_Login page Sign In started **********
+2026-m-13 12:48:48 PM:INFO:*********** test_invalid_login started **********
+2026-m-13 12:48:55 PM:INFO:*********** test_invalid_login error message matched **********
+2026-m-13 12:48:56 PM:INFO:*********** test_new_tab_link click started **********
+2026-m-13 12:49:00 PM:INFO:*********** switching the window handles to the new tab **********
+2026-m-13 12:49:00 PM:INFO:*********** New tab opened **********
+2026-m-13 12:49:00 PM:INFO:********** Retrieving text from the newly opened tab **********
+2026-m-13 12:49:03 PM:INFO:*********** Text successfully retrieved from the newly opened tab **********
+2026-m-13 12:49:03 PM:INFO:*********** Extracting substring from the retrieved text **********
+2026-m-13 12:49:03 PM:INFO:*********** Switch back to the original window tab **********

@@ -12,6 +12,7 @@ class LoginPage:
     checkbox_terms_css = "#terms"
     button_login_id = "signInBtn"
     link_new_tab_xpath = "//a[contains(text(), 'Free Access to')]"
+    text_incorrect_css = "div[class*='alert-danger']"
 
 
     def __init__(self, driver):
@@ -36,6 +37,13 @@ class LoginPage:
 
     def click_new_tab_link(self):
         self.driver.find_element(By.XPATH, self.link_new_tab_xpath).click()
+
+
+    def extract_incorrect_username_password(self):
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, self.text_incorrect_css)))
+
+
 
 
 

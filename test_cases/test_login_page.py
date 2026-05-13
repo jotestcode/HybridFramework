@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from selenium.webdriver.common.by import By
 
@@ -44,7 +42,8 @@ class Test03LoginPage:
         self.login_pageO.enter_password(self.password)
         self.login_pageO.click_terms()
         self.login_pageO.click_login()
-        time.sleep(3)
+
+        self.login_pageO.extract_incorrect_username_password()
 
         incorrect_signin_error_msg = self.driver.find_element(By.CSS_SELECTOR, "div[class*='alert-danger']").text
         if incorrect_signin_error_msg == "Incorrect username/password.":
@@ -68,7 +67,7 @@ class Test03LoginPage:
         self.loggerObj.info("*********** switching the window handles to the new tab **********")
         window_open = self.driver.window_handles
         self.driver.switch_to.window(window_open[1])
-        time.sleep(3)
+        #time.sleep(3)
         self.loggerObj.info("*********** New tab opened **********")
 
         self.loggerObj.info("********** Retrieving text from the newly opened tab **********")
