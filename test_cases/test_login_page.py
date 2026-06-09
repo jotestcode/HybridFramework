@@ -67,9 +67,8 @@ class Test03LoginPage:
         self.loggerObj.info("*********** switching the window handles to the new tab **********")
         window_open = self.driver.window_handles
         self.driver.switch_to.window(window_open[1])
-        #time.sleep(3)
-        self.loggerObj.info("*********** New tab opened **********")
 
+        self.loggerObj.info("*********** New tab opened **********")
         self.loggerObj.info("********** Retrieving text from the newly opened tab **********")
         new_tab_text = self.driver.find_element(By.XPATH, "//div/p[2]").text
         if "mentor@rahulshettyacademy.com" in new_tab_text:

@@ -21,7 +21,7 @@ class Test04MiscellaneousUiPage:
         self.misc_pageO = MiscellaneousUiPage(self.driver)
         self.misc_pageO.click_radiobutton()
 
-        self.loggerObj.info("*********** Entering a country name under 'Suggestion Class Exmaple' ***********")
+        self.loggerObj.info("*********** Entering a country name under 'Suggestion Class Example' ***********")
         self.misc_pageO.enter_countryname("ger")
 
         self.loggerObj.info("*********** Clicking on dropdown menu options ***********")
@@ -36,11 +36,11 @@ class Test04MiscellaneousUiPage:
         self.misc_pageO.click_switch_window()
 
         self.loggerObj.info("*********** Clicking on ALERT pop-up ************")
-        self.loggerObj.info("*********** Retrieving Alert pop-up text ************")
+        self.loggerObj.info("*********** Retrieving 'Alert' pop-up text ************")
         self.misc_pageO.click_alert()
 
         self.loggerObj.info("*********** Clicking on CONFIRM pop-up ************")
-        self.loggerObj.info("*********** Retrieving Confirm pop-up text ************")
+        self.loggerObj.info("*********** Retrieving 'Confirm' pop-up text ************")
         self.misc_pageO.click_confirm()
 
         self.loggerObj.info("*********** Clicking on HIDE button ************")
@@ -55,7 +55,6 @@ class Test04MiscellaneousUiPage:
         self.loggerObj.info("*********** Selecting and printing rows that matches with the position of Engineer ************")
         self.misc_pageO.extract_web_table_rows()
 
-        self.loggerObj.info("*********** Mouse Hover example ************")
         self.loggerObj.info("*********** Hover the mouse and select TOP option ************")
         self.loggerObj.info("*********** Scrolls to the top the top of the page ************")
         self.misc_pageO.action_mouse_hover()
