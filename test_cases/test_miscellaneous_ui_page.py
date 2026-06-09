@@ -61,6 +61,7 @@ class Test04MiscellaneousUiPage:
 
         self.loggerObj.info("*********** Switch to iFrame Window ************")
         self.loggerObj.info("*********** Extract the internal iFrame page title ************")
+        self.driver.save_screenshot("./screenshots/test_iFrame_window_page.png")
         self.loggerObj.info("*********** Switch back to the main window ************")
         self.misc_pageO.action_iFrame_window()
 

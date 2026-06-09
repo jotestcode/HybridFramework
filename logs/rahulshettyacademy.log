@@ -1903,3 +1903,46 @@
 2026-m-13 12:49:03 PM:INFO:*********** Text successfully retrieved from the newly opened tab **********
 2026-m-13 12:49:03 PM:INFO:*********** Extracting substring from the retrieved text **********
 2026-m-13 12:49:03 PM:INFO:*********** Switch back to the original window tab **********
+2026-m-09 09:42:00 AM:INFO:*********** Test Miscellaneous UI Interaction ***********
+2026-m-09 09:42:24 AM:INFO:*********** Clicking on Radio button ***********
+2026-m-09 09:42:24 AM:INFO:*********** Entering a country name under 'Suggestion Class Example' ***********
+2026-m-09 09:42:25 AM:INFO:*********** Clicking on dropdown menu options ***********
+2026-m-09 09:42:25 AM:INFO:*********** Clicking on checkbox options ************
+2026-m-09 09:42:26 AM:INFO:*********** Opening a new window page ************
+2026-m-09 09:42:26 AM:INFO:*********** Verifying if actual title matches with the expected title ************
+2026-m-09 09:42:26 AM:INFO:*********** Close the child window and switch back to parent window ************
+2026-m-09 09:42:28 AM:INFO:*********** Clicking on ALERT pop-up ************
+2026-m-09 09:42:28 AM:INFO:*********** Retrieving 'Alert' pop-up text ************
+2026-m-09 09:42:28 AM:INFO:*********** Clicking on CONFIRM pop-up ************
+2026-m-09 09:42:28 AM:INFO:*********** Retrieving 'Confirm' pop-up text ************
+2026-m-09 09:42:28 AM:INFO:*********** Clicking on HIDE button ************
+2026-m-09 09:42:28 AM:INFO:*********** Clicking on SHOW button ************
+2026-m-09 09:42:28 AM:INFO:*********** Enter random text on the textbox under HIDE/SHOW Example ************
+2026-m-09 09:42:28 AM:INFO:*********** Web table fixed header ************
+2026-m-09 09:42:28 AM:INFO:*********** Selecting and printing rows that matches with the position of Engineer ************
+2026-m-09 09:42:28 AM:INFO:*********** Hover the mouse and select TOP option ************
+2026-m-09 09:42:28 AM:INFO:*********** Scrolls to the top the top of the page ************
+2026-m-09 09:42:31 AM:INFO:*********** Switch to iFrame Window ************
+2026-m-09 09:42:31 AM:INFO:*********** Extract the internal iFrame page title ************
+2026-m-09 09:43:58 AM:INFO:*********** Test Miscellaneous UI Interaction ***********
+2026-m-09 09:44:22 AM:INFO:*********** Clicking on Radio button ***********
+2026-m-09 09:44:23 AM:INFO:*********** Entering a country name under 'Suggestion Class Example' ***********
+2026-m-09 09:44:23 AM:INFO:*********** Clicking on dropdown menu options ***********
+2026-m-09 09:44:23 AM:INFO:*********** Clicking on checkbox options ************
+2026-m-09 09:44:23 AM:INFO:*********** Opening a new window page ************
+2026-m-09 09:44:23 AM:INFO:*********** Verifying if actual title matches with the expected title ************
+2026-m-09 09:44:23 AM:INFO:*********** Close the child window and switch back to parent window ************
+2026-m-09 09:44:26 AM:INFO:*********** Clicking on ALERT pop-up ************
+2026-m-09 09:44:26 AM:INFO:*********** Retrieving 'Alert' pop-up text ************
+2026-m-09 09:44:26 AM:INFO:*********** Clicking on CONFIRM pop-up ************
+2026-m-09 09:44:26 AM:INFO:*********** Retrieving 'Confirm' pop-up text ************
+2026-m-09 09:44:27 AM:INFO:*********** Clicking on HIDE button ************
+2026-m-09 09:44:27 AM:INFO:*********** Clicking on SHOW button ************
+2026-m-09 09:44:27 AM:INFO:*********** Enter random text on the textbox under HIDE/SHOW Example ************
+2026-m-09 09:44:27 AM:INFO:*********** Web table fixed header ************
+2026-m-09 09:44:27 AM:INFO:*********** Selecting and printing rows that matches with the position of Engineer ************
+2026-m-09 09:44:27 AM:INFO:*********** Hover the mouse and select TOP option ************
+2026-m-09 09:44:27 AM:INFO:*********** Scrolls to the top the top of the page ************
+2026-m-09 09:44:30 AM:INFO:*********** Switch to iFrame Window ************
+2026-m-09 09:44:30 AM:INFO:*********** Extract the internal iFrame page title ************
+2026-m-09 09:44:30 AM:INFO:*********** Switch back to the main window ************
