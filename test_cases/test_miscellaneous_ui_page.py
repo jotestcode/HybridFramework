@@ -2,14 +2,16 @@ import pytest
 
 from base_pages.miscellaneous_ui_page import MiscellaneousUiPage
 from utilities.custom_logger import LogMaker
-from utilities.read_properties import ReadConfig
+from configurations.config import miscellaneouspageurl
 
 
 class Test04MiscellaneousUiPage:
 
-    misc_ui_page_url = ReadConfig.get_miscellaneous_ui_page_url()
+    misc_ui_page_url = miscellaneouspageurl
     loggerObj = LogMaker.log_gen()
 
+
+    @pytest.mark.ui
     @pytest.mark.sanity
     def test_miscellaneous_ui_interaction(self, setup):
         self.loggerObj.info("*********** Test Miscellaneous UI Interaction ***********")

@@ -4,14 +4,16 @@ from selenium.webdriver.common.by import By
 from base_pages.home_page import HomePage
 from base_pages.shop_page import ShopPage
 from utilities.custom_logger import LogMaker
-from utilities.read_properties import ReadConfig
+from configurations.config import homepageurl
 
 
 class Test02ShopPage:
 
-    home_page_url = ReadConfig.get_home_page_url()
+    home_page_url = homepageurl
     loggerObj = LogMaker.log_gen()
 
+
+    @pytest.mark.ui
     @pytest.mark.regression
     @pytest.mark.sanity
     def test_shop(self, setup):

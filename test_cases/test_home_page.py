@@ -1,17 +1,17 @@
 import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from utilities.custom_logger import LogMaker
-from utilities.read_properties import ReadConfig
+from configurations.config import homepageurl
 from base_pages.home_page import HomePage
 
 
 class Test01HomePage:
 
-    home_page_url = ReadConfig.get_home_page_url()
+    home_page_url = homepageurl
     loggerObj = LogMaker.log_gen()
 
+    @pytest.mark.ui
     @pytest.mark.regression
     def test_title_verification(self, setup):
         self.loggerObj.info("******** Test01HomePage **********")
@@ -33,6 +33,7 @@ class Test01HomePage:
             self.driver.close()
             assert False
 
+    @pytest.mark.ui
     @pytest.mark.sanity
     @pytest.mark.regression
     def test_home_page(self, setup):

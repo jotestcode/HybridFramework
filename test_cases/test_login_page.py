@@ -3,19 +3,20 @@ from selenium.webdriver.common.by import By
 
 from base_pages.login_page import LoginPage
 from utilities.custom_logger import LogMaker
-from utilities.read_properties import ReadConfig
+from configurations.config import loginpageurl, username, password, invalid_username
 
 
 class Test03LoginPage:
 
-    login_page_url = ReadConfig.get_login_page_url()
-    username = ReadConfig.get_username()
-    password = ReadConfig.get_password()
-    invalid_username = ReadConfig.get_invalid_username()
+    login_page_url = loginpageurl
+    username = username
+    password = password
+    invalid_username = invalid_username
     loggerObj = LogMaker.log_gen()
 
+
+    @pytest.mark.ui
     @pytest.mark.sanity
-    @pytest.mark.regression
     def test_valid_login(self, setup):
         self.loggerObj.info("*********** Test03 Login Page **********")
         self.loggerObj.info("*********** test_valid_Login page Sign In started **********")
@@ -30,6 +31,7 @@ class Test03LoginPage:
         self.login_pageO.click_login()
 
 
+    @pytest.mark.ui
     @pytest.mark.regression
     def test_invalid_login(self, setup):
         self.loggerObj.info("*********** test_invalid_login started **********")
@@ -56,6 +58,7 @@ class Test03LoginPage:
             assert False
 
 
+    @pytest.mark.ui
     @pytest.mark.sanity
     def test_new_tab_link(self, setup):
         self.loggerObj.info("*********** test_new_tab_link click started **********")

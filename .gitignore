@@ -1,0 +1,7 @@
+.env
+venv/
+reports/
+logs/
+screenshots/
+.pytest_cache/
+.DS_Store
