@@ -1,8 +1,9 @@
-pytest
 selenium
+pytest
 requests
 pytest-html
 pytest-xdist
 python-dotenv
 webdriver-manager
+allure-pytest
 Faker
