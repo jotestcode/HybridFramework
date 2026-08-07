@@ -8,64 +8,108 @@ from configurations.config import miscellaneouspageurl
 class Test04MiscellaneousUiPage:
 
     misc_ui_page_url = miscellaneouspageurl
-    loggerObj = LogMaker.log_gen()
+
+    loggerObj = LogMaker.log_gen("UI")
 
 
     @pytest.mark.ui
     @pytest.mark.sanity
     def test_miscellaneous_ui_interaction(self, setup):
-        self.loggerObj.info("*********** Test Miscellaneous UI Interaction ***********")
+
+        self.loggerObj.info("=" * 80)
+        self.loggerObj.info("Test started: Miscellaneous UI Interaction")
 
         self.driver = setup
+
+        self.loggerObj.info(
+            f"Opening miscellaneous URL: {self.misc_ui_page_url}"
+        )
         self.driver.get(self.misc_ui_page_url)
 
-        self.loggerObj.info("*********** Clicking on Radio button ***********")
         self.misc_pageO = MiscellaneousUiPage(self.driver)
+
+        self.loggerObj.info("Clicking Radio button")
+
         self.misc_pageO.click_radiobutton()
 
-        self.loggerObj.info("*********** Entering a country name under 'Suggestion Class Example' ***********")
+        # Auto Suggestion
+        self.loggerObj.info("Entering country name under Suggestion Class Example")
+
         self.misc_pageO.enter_countryname("ger")
 
-        self.loggerObj.info("*********** Clicking on dropdown menu options ***********")
+        # Dropdown
+        self.loggerObj.info("Selecting Dropdown option")
+
         self.misc_pageO.click_dropdown()
 
-        self.loggerObj.info("*********** Clicking on checkbox options ************")
+        # Checkbox
+        self.loggerObj.info("Selecting checkbox option")
+
         self.misc_pageO.click_checkbox()
 
-        self.loggerObj.info("*********** Opening a new window page ************")
-        self.loggerObj.info("*********** Verifying if actual title matches with the expected title ************")
-        self.loggerObj.info("*********** Close the child window and switch back to parent window ************")
+        # Window Handling
+        self.loggerObj.info("Opening child window")
+
+        self.loggerObj.info("Verifying child window title")
+
         self.misc_pageO.click_switch_window()
 
-        self.loggerObj.info("*********** Clicking on ALERT pop-up ************")
-        self.loggerObj.info("*********** Retrieving 'Alert' pop-up text ************")
+        # Alert Popup
+        self.loggerObj.info("Opening ALERT pop-up")
+        self.loggerObj.info("Retrieving 'Alert' pop-up text")
+
         self.misc_pageO.click_alert()
 
-        self.loggerObj.info("*********** Clicking on CONFIRM pop-up ************")
-        self.loggerObj.info("*********** Retrieving 'Confirm' pop-up text ************")
+        # Confirm Popup
+        self.loggerObj.info("Opening CONFIRM pop-up")
+        self.loggerObj.info("Retrieving 'Confirm' pop-up text")
+
         self.misc_pageO.click_confirm()
 
-        self.loggerObj.info("*********** Clicking on HIDE button ************")
+        # HIde / Show Example
+        self.loggerObj.info("Clicking on HIDE button")
+
         self.misc_pageO.click_hide()
 
-        self.loggerObj.info("*********** Clicking on SHOW button ************")
+        self.loggerObj.info("Clicking on SHOW button")
+
         self.misc_pageO.click_show()
-        self.loggerObj.info("*********** Enter random text on the textbox under HIDE/SHOW Example ************")
+
+        self.loggerObj.info("Entering random text in HIDE/SHOW textbox")
+
         self.misc_pageO.enter_hide_show_name("Emma")
 
-        self.loggerObj.info("*********** Web table fixed header ************")
-        self.loggerObj.info("*********** Selecting and printing rows that matches with the position of Engineer ************")
+        # Web Table
+        self.loggerObj.info("Extracting Web Table rows")
+        self.loggerObj.info("Filtering rows based on Engineer position")
+
         self.misc_pageO.extract_web_table_rows()
 
-        self.loggerObj.info("*********** Hover the mouse and select TOP option ************")
-        self.loggerObj.info("*********** Scrolls to the top the top of the page ************")
+        # Mouse Hover
+        self.loggerObj.info("Performing Mouse Hover action")
+        self.loggerObj.info("Scrolls to the TOP/BEGINNING of the page")
+
         self.misc_pageO.action_mouse_hover()
 
-        self.loggerObj.info("*********** Switch to iFrame Window ************")
-        self.loggerObj.info("*********** Extract the internal iFrame page title ************")
-        self.driver.save_screenshot("./screenshots/test_iFrame_window_page.png")
-        self.loggerObj.info("*********** Switch back to the main window ************")
+        # iFrame
+        self.loggerObj.info("Switching to iFrame Window")
+        self.loggerObj.info("Extracting iFrame page title")
+
         self.misc_pageO.action_iFrame_window()
+
+        screenshot = "./screenshots/test_iFrame__window_page.png"
+        self.driver.save_screenshot(screenshot)
+
+        self.loggerObj.info(
+            f"Screenshot saved to: {screenshot}"
+        )
+
+        self.loggerObj.info("Switching back to main window")
+
+        self.loggerObj.info("Miscellaneous UI Page Interaction Test PASSED")
+
+
+
 
 
 

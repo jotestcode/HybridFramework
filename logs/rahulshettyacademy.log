@@ -2000,3 +2000,25 @@
 2026-m-06 15:31:13 PM:INFO:*********** Purchasing the items *************
 2026-m-06 15:31:14 PM:INFO:*********** Success text message *************
 2026-m-06 15:31:14 PM:INFO:Text message appears successfully *************
+2026-m-07 13:55:29 PM:INFO:*********** Test Miscellaneous UI Interaction ***********
+2026-m-07 13:55:33 PM:INFO:*********** Clicking on Radio button ***********
+2026-m-07 13:55:34 PM:INFO:*********** Entering a country name under 'Suggestion Class Example' ***********
+2026-m-07 13:55:34 PM:INFO:*********** Clicking on dropdown menu options ***********
+2026-m-07 13:55:35 PM:INFO:*********** Clicking on checkbox options ************
+2026-m-07 13:55:35 PM:INFO:*********** Opening a new window page ************
+2026-m-07 13:55:35 PM:INFO:*********** Verifying if actual title matches with the expected title ************
+2026-m-07 13:55:35 PM:INFO:*********** Close the child window and switch back to parent window ************
+2026-m-07 13:55:36 PM:INFO:*********** Clicking on ALERT pop-up ************
+2026-m-07 13:55:36 PM:INFO:*********** Retrieving 'Alert' pop-up text ************
+2026-m-07 13:55:36 PM:INFO:*********** Clicking on CONFIRM pop-up ************
+2026-m-07 13:55:36 PM:INFO:*********** Retrieving 'Confirm' pop-up text ************
+2026-m-07 13:55:36 PM:INFO:*********** Clicking on HIDE button ************
+2026-m-07 13:55:36 PM:INFO:*********** Clicking on SHOW button ************
+2026-m-07 13:55:36 PM:INFO:*********** Enter random text on the textbox under HIDE/SHOW Example ************
+2026-m-07 13:55:36 PM:INFO:*********** Web table fixed header ************
+2026-m-07 13:55:36 PM:INFO:*********** Selecting and printing rows that matches with the position of Engineer ************
+2026-m-07 13:55:36 PM:INFO:*********** Hover the mouse and select TOP option ************
+2026-m-07 13:55:36 PM:INFO:*********** Scrolls to the top the top of the page ************
+2026-m-07 13:55:39 PM:INFO:*********** Switch to iFrame Window ************
+2026-m-07 13:55:39 PM:INFO:*********** Extract the internal iFrame page title ************
+2026-m-07 13:55:39 PM:INFO:*********** Switch back to the main window ************

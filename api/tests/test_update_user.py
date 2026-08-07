@@ -1,11 +1,16 @@
 import pytest
 
 from api.data.user_payload import create_user_payload
+from utilities.custom_logger import LogMaker
+
+logger = LogMaker.log_gen("API")
 
 
 @pytest.mark.api
-@pytest.mark.sanity
+@pytest.mark.regression
 def test_update_user(api_client):
+
+    logger.info("******* Update User test started ******")
 
     create = api_client.post("/users", create_user_payload())
 
@@ -19,8 +24,9 @@ def test_update_user(api_client):
 
     response = api_client.put(f"/users/{user_id}", payload)
 
+
     assert response.status_code == 200
+
     assert response.json()["status"] == "inactive"
 
-    print(f"Response status code: {response.status_code}")
-    print(f"Updated user: {response.json()}")
+    logger.info("******* Update User test passed ******")

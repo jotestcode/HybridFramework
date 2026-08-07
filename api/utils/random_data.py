@@ -1,4 +1,6 @@
-import uuid
+from faker import Faker
+
+fake = Faker()
 
 def random_email():
-    return f"user_{uuid.uuid4().hex[:8]}@gmail.com"
+    return fake.unique.email()

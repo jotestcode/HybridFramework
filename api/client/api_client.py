@@ -1,4 +1,10 @@
+import time
+
 import requests
+
+from utilities.custom_logger import LogMaker
+
+logger = LogMaker.log_gen("API")
 
 class APIClient:
 
@@ -16,23 +22,82 @@ class APIClient:
             })
 
     def get(self, endpoint):
-        return self.session.get(
-            self.api_url + endpoint
-        )
+        url = self.api_url + endpoint
+
+        logger.info("=" * 80)
+        logger.info(f"GET Request: {url}")
+
+        start_time = time.perf_counter()
+
+        response = self.session.get(url)
+
+        end_time = time.perf_counter()
+
+        logger.info(f"Status Code: {response.status_code}")
+        logger.info(f"Response Time: {(end_time - start_time):.3f} seconds")
+        logger.info(f"Response Body: {response.text}")
+
+        return response
 
     def post(self, endpoint, payload):
-        return self.session.post(
-            self.api_url + endpoint,
+        url = self.api_url + endpoint
+
+        logger.info("=" * 80)
+        logger.info(f"POST Request: {url}")
+        logger.info(f"Request payload: {payload}")
+
+        start_time = time.perf_counter()
+
+        response = self.session.post(
+            url,
             json=payload
         )
+
+        end_time = time.perf_counter()
+
+        logger.info(f"Status Code: {response.status_code}")
+        logger.info(f"Response Time: {(end_time - start_time):.3f} seconds")
+        logger.info(f"Response Body: {response.text}")
+
+        return response
 
     def put(self, endpoint, payload):
-        return self.session.put(
-            self.api_url + endpoint,
+        url = self.api_url + endpoint
+
+        logger.info("=" * 80)
+        logger.info(f"PUT Request: {url}")
+        logger.info(f"Request payload: {payload}")
+
+        start_time = time.perf_counter()
+
+        response = self.session.put(
+            url,
             json=payload
         )
 
+        end_time = time.perf_counter()
+
+        logger.info(f"Status Code: {response.status_code}")
+        logger.info(f"Response Time: {(end_time - start_time):.3f} seconds")
+        logger.info(f"Response Body: {response.text}")
+
+        return response
+
+
     def delete(self, endpoint):
-        return self.session.delete(
-            self.api_url + endpoint
-        )
+        url = self.api_url + endpoint
+
+        logger.info("=" * 80)
+        logger.info(f"DELETE Request: {url}")
+
+        start_time = time.perf_counter()
+
+        response = self.session.delete(url)
+
+        end_time = time.perf_counter()
+
+        logger.info(f"Status Code: {response.status_code}")
+        logger.info(f"Response Time: {(end_time - start_time):.3f} seconds")
+        logger.info(f"Response Body: {response.text}")
+
+        return response

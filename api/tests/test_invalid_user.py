@@ -1,13 +1,20 @@
 import pytest
 
+from utilities.custom_logger import LogMaker
+
+logger = LogMaker.log_gen("API")
+
 
 @pytest.mark.api
 @pytest.mark.sanity
-def test_invalid_user(api_client):
+def test_get_invalid_user(api_client):
 
-    response = api_client.get("/users/999999999")
+    logger.info("******* GET INVALID USER test started ******")
 
-    assert response.status_code == 404, response.text
+    response = api_client.get("/users/9999999999")
 
-    print(f"Invalid user id status code: {response.status_code}")
+    assert response.status_code == 404
 
+    print(f"Invalid user id response status code: {response.status_code}")
+
+    logger.info("******* GET INVALID USER test passed ******")
