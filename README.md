@@ -176,13 +176,13 @@ allure serve allure-results
 git clone: https://github.com/jotestcode/HybridFramework.git
 
 #### Navigate to the project:
-
+```
 cd HybridFramework
-
+```
 #### Install dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Running Tests
