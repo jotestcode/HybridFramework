@@ -177,11 +177,11 @@ git clone: https://github.com/jotestcode/HybridFramework.git
 
 #### Navigate to the project:
 
-cd HybridFramework
+'''cd HybridFramework'''
 
 #### Install dependencies:
 
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
