@@ -165,7 +165,7 @@ pytest --alluredir=allure-results
 ```
 Generate and view the report:
 ```
-allure serve allure-results`
+allure serve allure-results
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
