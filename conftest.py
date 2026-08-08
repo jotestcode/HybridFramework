@@ -53,6 +53,7 @@ def pytest_metadata(metadata):
     metadata.pop('Plugins', None)
 
 
+# API
 @pytest.fixture(scope="session")
 def api_client():
     return APIClient(
