@@ -1,4 +1,4 @@
-## Hybrid Automation Framework (UI + API)  
+# Hybrid Automation Framework (UI + API + CI)  
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,6 +9,7 @@
 ![Framework](https://img.shields.io/badge/Framework-Hybrid%20UI%20%2B%20API-purple)
 ![POM](https://img.shields.io/badge/Design%20Pattern-Page%20Object%20Model-brightgreen)
 ![Allure](https://img.shields.io/badge/Allure-Reporting-black)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI-red)
 ![HTML Report](https://img.shields.io/badge/Pytest-HTML%20Report-orange)
 ![Faker](https://img.shields.io/badge/Test%20Data-Faker-brown)
 ![Browser](https://img.shields.io/badge/Browser-Chrome%20%7C%20Firefox-yellow)
@@ -18,6 +19,13 @@ This framework combines **UI Automation** and **API Automation** into a single p
 
 The framework is designed to be scalable, maintainable, and easy to integrate with CI/CD pipelines.  
 
+- Developed a hybrid automation framework covering UI automation with Selenium and REST API testing with Requests using Pytest.  
+- Implemented reusable Page Object Model components, test configuration, logging, test data and reporting.  
+- Integrated the framework with Jenkins to automatically pull the latest code from GitHub, create a Python virtual environment, install dependencies, and execute the automated test suite.  
+- Configured Jenkins to generate HTML test reports after execution.  
+- Successfully executed automated UI and API tests with 100% pass rate in Jenkins.  
+- Used Git/GitHub for source control and Jenkins for CI-based test execution.  
+
 ## Tech Stack  
 - Python  
 - Pytest  
@@ -25,6 +33,7 @@ The framework is designed to be scalable, maintainable, and easy to integrate wi
 - Requests  
 - Page Object Model (POM)  
 - Faker  
+- Jenkins  
 - Logging  
 - Pytest HTML Reports  
 - Allure Reports  
@@ -84,7 +93,7 @@ The framework is designed to be scalable, maintainable, and easy to integrate wi
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-# UI Automation
+## UI Automation
 
 The UI automation is developed using Selenium WebDriver with the Page Object Model (POM) design pattern.
 
@@ -129,7 +138,7 @@ The API automation is implemented using the Requests library.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-### Logging
+## Logging
 
 A centralized custom logger is used throughout the framework.
 
@@ -149,6 +158,26 @@ A centralized custom logger is used throughout the framework.
 - Response Body  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+## Jenkins Integration
+
+The hybrid automation framework is integrated with Jenkins for automated test execution.  
+
+Jenkins is used to execute the Pytest test suites and generate test execution reports. 
+
+Example execution:
+
+```bash
+pytest -m "ui or api" --html=reports/hybrid_report.html --self-contained-html --alluredir=allure-results
+```
+
+The Jenkins job can execute:
+- UI tests  
+- API tests  
+- Sanity tests  
+- Regression tests  
+- Pytest HTML reports  
+- Allure test results  
 
 ## Reporting
 ### Pytest HTML Report
