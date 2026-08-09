@@ -1,4 +1,4 @@
-# Hybrid Automation Framework (UI + API + CI)  
+# Hybrid Automation Framework (UI + API + Jenkins CI)  
 
 --------------------------------------------------------------------------------------------------------------------------------
 
@@ -14,17 +14,50 @@
 ![Faker](https://img.shields.io/badge/Test%20Data-Faker-brown)
 ![Browser](https://img.shields.io/badge/Browser-Chrome%20%7C%20Firefox-yellow)
 
-A Hybrid Automation Framework built using **Python, Pytest, Selenium WebDriver**, and **Requests**.  
-This framework combines **UI Automation** and **API Automation** into a single project, following the **Page Object Model (POM)** design pattern for UI tests and a reusable API client for REST API testing.  
+A Hybrid Test Automation Framework built using **Python, Pytest, Selenium WebDriver**, and **Requests**.  
+The framework combines **UI Automation** and **REST API Automation** in a single project. UI tests follow the **Page Object Model (POM)** design pattern, while API tests use a reusable API client.  
 
-The framework is designed to be scalable, maintainable, and easy to integrate with CI/CD pipelines.  
+The framework is designed to be modular, scalable, maintainable, reusable and CI-ready.  
 
-- Developed a hybrid automation framework covering UI automation with Selenium and REST API testing with Requests using Pytest.  
-- Implemented reusable Page Object Model components, test configuration, logging, test data and reporting.  
-- Integrated the framework with Jenkins to automatically pull the latest code from GitHub, create a Python virtual environment, install dependencies, and execute the automated test suite.  
-- Configured Jenkins to generate HTML test reports after execution.  
-- Successfully executed automated UI and API tests with 100% pass rate in Jenkins.  
-- Used Git/GitHub for source control and Jenkins for CI-based test execution.  
+----------------------------------------------------------------------------------------------------------------------------
+
+## Project Overview
+
+This framework covers:  
+
+- UI automation using Selenium WebDriver  
+- REST API automation using Requests  
+- Page Object Model (POM)  
+- Pytest fixtures and markers  
+- Data-driven test data generation using Faker  
+- Custom logging  
+- Screenshot capture  
+- HTML test reporting  
+- Allure reporting support  
+- Jenkins CI integration  
+- Git/GitHub source control  
+
+### Current Jenkins Execution
+
+The framework is integrated with **Jenkins Freestyle Project** for continuous test execution.
+
+The Jenkins job:
+
+1. Checks out the latest code from GitHub  
+2. Creates a Python virtual environment  
+3. Installs project dependencies from requirements.txt  
+4. Executes the Pytest automation suite  
+5. Generates an HTML test report  
+6. Publishes the test execution result  
+
+### Latest Jenkins Test Result
+
+### 12 automated tests executed — 12 passed
+
+- UI Tests: 7  
+- API Tests: 5  
+- Result: 100% Passed  
+- Execution Status: SUCCESS  
 
 ## Tech Stack  
 - Python  
@@ -110,16 +143,49 @@ The UI automation is developed using Selenium WebDriver with the Page Object Mod
 - Pytest markers (`ui, sanity, regression`)  
 
 ### UI Test Modules:  
-- Home Page  
-- Login Page  
-- Shop Page  
-- Miscellaneous UI Page  
+### Home Page  
+
+- Page title validation  
+- Form submission  
+- Input field validation  
+- Success message validation  
+
+### Login Page  
+
+- Valid login  
+- Invalid login  
+- Error message validation  
+- New tab/window handling  
+- Text extraction and validation  
+
+### Shop Page  
+
+- Product selection  
+- Add-to-cart flow  
+- Checkout process  
+- Country selection  
+- Terms and conditions  
+- Purchase validation  
+
+### Miscellaneous UI Page  
+
+- Radio buttons  
+- Dropdowns  
+- Checkboxes  
+- Alerts  
+- Confirmation popups  
+- Browser windows  
+- iFrames  
+- Mouse hover  
+- Web tables  
+- Hide/Show elements  
+- Scrolling  
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 ## API Automation  
 
-The API automation is implemented using the Requests library.  
+The API automation is implemented using the **Requests** library with a reusable API client.  
 
 ### API Features:
 - Reusable API Client  
@@ -136,7 +202,30 @@ The API automation is implemented using the Requests library.
 - Status code validation  
 - Response body validation
 
+### API Test Scenarios 
+
+- Get users  
+- Create user  
+- Update user  
+- Delete user  
+- Validate invalid user response  
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+## Test Data & Configuration
+
+Environment-specific configuration is managed using **Python-dotenv**.
+
+The framework reads configuration values from a `.env` file, including:  
+
+- Application URLs  
+- UI credentials  
+- API base URL  
+- API token  
+
+Sensitive configuration such as passwords and API tokens **should not be committed to GitHub**.
+
+-----------------------------------------------------------------------------------------------------------------------
 
 ## Logging
 
@@ -159,36 +248,60 @@ A centralized custom logger is used throughout the framework.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-## Jenkins Integration
+## Jenkins CI Integration
 
-The hybrid automation framework is integrated with Jenkins for automated test execution.  
+The automation framework is integrated with **Jenkins Freestyle Project** for CI-based test execution.  
 
-Jenkins is used to execute the Pytest test suites and generate test execution reports. 
+### Jenkins Workflow
+GitHub Repository  
+       ↓  
+Jenkins Freestyle Job  
+       ↓  
+Checkout Source Code  
+       ↓  
+Create Python Virtual Environment  
+       ↓  
+Install requirements.txt  
+       ↓  
+Execute Pytest Tests  
+       ↓  
+Generate HTML Report  
+       ↓  
+Build Result  
 
-Example execution:
+### Jenkins Build Configuration
 
-```bash
-pytest -m "ui or api" --html=reports/hybrid_report.html --self-contained-html --alluredir=allure-results
-```
+The Jenkins job performs the following operations:
 
-The Jenkins job can execute:
-- UI tests  
-- API tests  
-- Sanity tests  
-- Regression tests  
-- Pytest HTML reports  
-- Allure test results  
+python3 -m venv venv  
+source venv/bin/activate  
+python -m pip install --upgrade pip  
+python -m pip install -r requirements.txt  
+python -m pytest -s -v --html=reports/report.html --browser chrome  
+
+The Jenkins job successfully executes both UI and API automation tests and generates a Pytest HTML report.
+
+#### Latest Successful Build
+Test Suite: Hybrid Automation Framework - UI + API  
+Total Tests: 12  
+Passed: 12  
+Failed: 0  
+Result: SUCCESS  
+
+--------------------------------------------------------------------------------------------------------------------------- 
 
 ## Reporting
 ### Pytest HTML Report
 
-#### Generate HTML report:
+The framework generates an HTML test execution report using `pytest-html`.
 ```
-pytest --html=reports/hybrid_report.html --self-contained-html
+pytest --html=reports/report.html --self-contained-html
 ```
-### Allure Report:
+The HTML report provides test execution details, results, environment information and test metedata. 
 
-#### Run tests:
+### Allure Reporting:
+
+#### Run tests with:
 ```
 pytest --alluredir=allure-results
 ```
@@ -207,6 +320,20 @@ git clone: https://github.com/jotestcode/HybridFramework.git
 #### Navigate to the project:
 ```
 cd HybridFramework
+```
+### Create Virtual Environment
+```
+python3 -m venv venv
+```
+### Activate Virtual Environment
+
+### macOS / Linux
+```
+source venv/bin/activate
+```
+### Windows
+```
+venv\Scripts\activate
 ```
 #### Install dependencies:
 ```
@@ -250,16 +377,23 @@ pytest -m "ui or api" --html=reports/hybrid_report.html --self-contained-html --
 
 ## Framework Highlights
 
-- Hybrid UI and API automation framework  
-- Modular and reusable architecture  
-- Page Object Model (POM)  
+- Hybrid UI and API automation  
+- Selenium WebDriver automation  
+- REST API automation using Requests  
+- Page Object Model (POM) architecture  
 - Reusable API Client  
-- Pytest Fixtures  
-- Data-driven test payload generation  
+- Pytest fixtures  
+- Pytest markers  
+- Dynamic test data generation  
 - Faker integration  
+- Environment-based configuration  
 - Custom logging  
-- HTML and Allure reporting  
-- Easy maintenance and scalability  
+- Screenshot capture  
+- HTML test reporting  
+- Allure reporting support  
+- Jenkins CI integration  
+- Git/GitHub source control  
+- Modular and maintainable architecture   
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -267,4 +401,4 @@ pytest -m "ui or api" --html=reports/hybrid_report.html --self-contained-html --
 
 #### Josephine Job
 
-Python | Selenium | API Testing | Pytest | Automation Testing  
+Python | Selenium | API Testing | Pytest | Automation Testing  | Jenkins
